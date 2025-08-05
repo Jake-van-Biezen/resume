@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+
+% Define colors
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{lightgray}{RGB}{128,128,128}
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Remove page numbering
+\pagestyle{empty}
+
+% Custom commands
+\newcommand{\resumeitem}[1]{\item\small{#1}}
+\newcommand{\resumesubheading}[4]{%
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \ifthenelse{\equal{#3}{} \and \equal{#4}{}}{}{%
+        \textit{\small#3} & \textit{\small #4} \\
+      }%
+    \end{tabular*}\vspace{-5pt}%
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Jake van Biezen}} \\
+    \vspace{5pt}
+    {\large Technical Consultant @ SLTN} \\
+    \vspace{5pt}
+    Hillegom, Zuid-Holland, Nederland \\
+    \vspace{8pt}
+    \faEnvelope\ jake1998@hotmail.nl \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/jake-van-biezen}{linkedin.com/in/jake-van-biezen}
+\end{center}
+
+\vspace{10pt}
+
+% Experience Section
+\section{Ervaring}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\resumesubheading
+    {Technisch Consultant}{April 2023 - Present (2 jaar 5 maanden)}
+    {SLTN}{Hilversum, Noord-Holland, Nederland}
+    
+\resumesubheading
+    {Software Engineer Intern}{Oktober 2022 - April 2023 (7 maanden)}
+    {Kepler Vision Technologies}{Amsterdam}
+    
+\resumesubheading
+    {Junior Technisch Consultant}{September 2021 - September 2022 (1 jaar 1 maand)}
+    {SLTN}{Hilversum, Noord-Holland, Nederland}
+    
+\resumesubheading
+    {Stagiair Datacenter \& Cloud}{Maart 2021 - Augustus 2021 (6 maanden)}
+    {SLTN}{Hilversum, Noord-Holland, Nederland}
+\end{itemize}
+
+% Education Section
+\section{Opleiding}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\resumesubheading
+    {Bachelor, Cyber Security \& Cloud}{September 2018 - Februari 2023}
+    {Hogeschool Utrecht}{}
+\end{itemize}
+
+% Certifications Section
+\section{Certificeringen}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\resumesubheading
+    {\textbf{\href{https://www.credly.com/badges/c97d067a-1264-442e-8c1c-e4f84b560517}{CKA: Certified Kubernetes Administrator}}}{juni 2025 - juni 2027}
+    {DevOps}{}
+
+\resumesubheading
+    {\textbf{\href{https://www.credly.com/badges/1794fdf2-ca6e-4538-ab59-ab42f042c8b6}{HashiCorp Certified: Terraform Associate (003)
+}}}{april 2025 - april 2027}
+    {DevOps}{}
+
+\resumesubheading
+    {\textbf{\href{https://www.credly.com/badges/3d2d91ca-7a8c-432a-9a1f-a858d48a5f0d}{Microsoft Certified: Azure Fundamentals}}}{mei 2021 - \infty}
+    {Cloud}{}
+
+\resumesubheading
+    {\textbf{\href{https://www.credly.com/badges/4e320328-8670-4284-827f-527c1b6de2c9}{Microsoft Certified: Azure Administrator Associate}}}{juni 2023 - juni 2024 (verlopen)}
+    {Cloud}{}
+
+\resumesubheading
+    {\textbf{\href{https://www.youracclaim.com/badges/ae78b326-eebb-43a1-ba83-3d62e10b2246}{AWS Certified Cloud Practitioner}}}{juli 2020 - december 2023 (verlopen)}
+    {Cloud}{}
+
+\resumesubheading
+    {\textbf{\href{https://www.youracclaim.com/badges/ae0ea787-83a7-47b9-b31a-5b8eaa61a00c}{AWS Certified Solutions Architect – Associate}}}{dec 2020 - dec 2023 (verlopen)}
+    {Cloud}{}
+\end{itemize}
+
+% Skills Section
+\section{Belangrijkste Vaardigheden}
+
+\begin{itemize}[leftmargin=0.25in, label={}]
+\item \textbf{Cloud Platforms:} Amazon Web Services (EC2, ECS Anywhere, API Gateway), Microsoft Azure (AKS)
+\item \textbf{Container Orchestration:} Kubernetes, Helm, Docker
+\item \textbf{Infrastructure as Code:} Terraform, Azure Resource Manager
+\item \textbf{CI/CD:} Azure DevOps, GitOps workflows
+\item \textbf{Monitoring \& Observability:} Prometheus, Grafana (kube-prometheus-stack)
+\item \textbf{Operating Systems:} Linux (daily driver), Windows Server
+\item \textbf{Web Technologies:} SvelteKit, Nginx
+\item \textbf{Databases:} Microsoft SQL Server, MySQL
+\end{itemize}
+
+\end{document}
